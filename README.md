@@ -6,6 +6,17 @@
 
 ![alt text](https://img.shields.io/badge/Docker-Enabled-blue?logo=docker)
 
+```bash
+nnUNetv2_predict \
+    -i /app/nnUNet_raw/Dataset999_SPECT/imagesTs \
+    -o /app/nnUNet_results/Dataset999_SPECT/predictions \
+    -d 999 \
+    -c 2d \
+    -f 0 \
+    -chk checkpoint_best.pth \
+    --save_probabilities 
+```
+
 <p align="center">
   <img src="assets/Soft_probability_prediction.png" alt="SPECT Segmentation Demo (Using probability)" width="500">
   <br>
@@ -146,7 +157,6 @@ b)If your host machine has **no** GPUs
   -v ~/nnUNet_data:/data \
   spect-segmenter
    ```
-
 
 You are now inside the container terminal.
 ## 🚀 Option 1: Train from Scratch (You need GPUs)
