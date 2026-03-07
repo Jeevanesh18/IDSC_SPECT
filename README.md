@@ -14,8 +14,8 @@ nnUNetv2_predict \
     -c 2d \
     -f 0 \
     -chk checkpoint_best.pth \
-    --save_probabilities
-    -device cpu
+    --save_probabilities -device cpu
+    
 ```
 
 <p align="center">
