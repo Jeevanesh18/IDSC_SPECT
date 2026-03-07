@@ -145,6 +145,16 @@ b)If your host machine has **no** GPUs
   -v ~/nnUNet_data:/data \
   spect-segmenter
    ```
+```bash
+docker run -it \
+  -v ~/nnUNet_data/nnUNet_raw:/app/nnUNet_raw \
+  -v ~/nnUNet_data/nnUNet_preprocessed:/app/nnUNet_preprocessed \
+  -v ~/nnUNet_data/nnUNet_results:/app/nnUNet_results \
+  -v ~/nnUNet_data:/data \
+  -v ~/prepare_dataset.py:/app/prepare_dataset.py \
+  spect-segmenter
+```
+
 
 You are now inside the container terminal.
 ## 🚀 Option 1: Train from Scratch
