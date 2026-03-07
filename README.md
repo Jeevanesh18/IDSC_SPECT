@@ -149,7 +149,7 @@ b)If your host machine has **no** GPUs
 
 
 You are now inside the container terminal.
-## 🚀 Option 1: Train from Scratch
+## 🚀 Option 1: Train from Scratch (You need GPUs)
 Follow these steps to reproduce the training pipeline completely.
 **1. Download and Preprocess Data:**
 This script downloads the zip from PhysioNet, converts DICOMs, and splits the data.
