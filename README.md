@@ -177,6 +177,8 @@ Start the Docker container (as shown in Installation). Run the prediction script
 ```bash
   bash predict.sh
    ```
+**Reminder: I predicted using the best checkpoint path after 200 epoch**
+
 ## 🔍 Visualization & Insights
 Medical AI must be explainable. We generate detailed PDF reports for every patient in the test set.
 **Generate Reports:**
