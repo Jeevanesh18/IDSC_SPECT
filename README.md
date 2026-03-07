@@ -61,6 +61,12 @@ Key features:
 
 - Pseudo Dice: 0.8973
 
+**Google Colab links:**
+
+[Preprocessing and Training](https://colab.research.google.com/drive/1ty-v1-J_mvrP1T8izCo8D74vuBtZ6NvH?usp=sharing)
+
+[Continuing training, predictions and visualizations](https://colab.research.google.com/drive/1b_lrf7zDM0ENmZ3tt4ZkgZJuAINna_8p?usp=sharing)
+
 ## 📦 Dataset & Preprocessing
 Source: [PhysioNet Myocardial Perfusion SPECT (MPS) Database](https://www.google.com/url?sa=E&q=https%3A%2F%2Fphysionet.org%2Fcontent%2Fmyocardial-perfusion-spect%2F1.0.0%2F)
 
