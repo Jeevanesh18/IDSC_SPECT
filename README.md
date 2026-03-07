@@ -127,6 +127,8 @@ nnUNet_data
    ```
 5. Run the container:
 **Note: We mount the local folders to the container so data persists after the container stops.**
+
+a)If your host machine has GPUs
 ```bash
   docker run --gpus all -it \
   -v ~/nnUNet_data/nnUNet_raw:/app/nnUNet_raw \
@@ -134,6 +136,15 @@ nnUNet_data
   -v ~/nnUNet_data/nnUNet_results:/app/nnUNet_results \
   spect-segmenter
    ```
+b)If your host machine has **no** GPUs
+```bash
+  docker run -it \
+  -v ~/nnUNet_data/nnUNet_raw:/app/nnUNet_raw \
+  -v ~/nnUNet_data/nnUNet_preprocessed:/app/nnUNet_preprocessed \
+  -v ~/nnUNet_data/nnUNet_results:/app/nnUNet_results \
+  spect-segmenter
+   ```
+
 You are now inside the container terminal.
 ## 🚀 Option 1: Train from Scratch
 Follow these steps to reproduce the training pipeline completely.
