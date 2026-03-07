@@ -142,6 +142,7 @@ b)If your host machine has **no** GPUs
   -v ~/nnUNet_data/nnUNet_raw:/app/nnUNet_raw \
   -v ~/nnUNet_data/nnUNet_preprocessed:/app/nnUNet_preprocessed \
   -v ~/nnUNet_data/nnUNet_results:/app/nnUNet_results \
+  -v ~/nnUNet_data:/data \
   spect-segmenter
    ```
 
