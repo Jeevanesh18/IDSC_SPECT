@@ -92,6 +92,7 @@ To guarantee reproducibility, we use Docker. This ensures you run the exact same
 **1. Create the data directories on your host machine:**
 
 ```bash
+cd ~
 mkdir -p nnUNet_data/nnUNet_raw
 mkdir -p nnUNet_data/nnUNet_preprocessed
 mkdir -p nnUNet_data/nnUNet_results
@@ -114,7 +115,7 @@ nnUNet_data
   cd IDSC_SPECT
    ```
 
-4. Build the Docker image:
+4. Build the Docker image. It may take a while especially longer if you are using mac (5-10mins):
 ```bash
   docker build -t spect-segmenter .
    ```
