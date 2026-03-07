@@ -21,6 +21,8 @@
 **Automated segmentation of the left ventricular wall from Myocardial Perfusion SPECT images using nnU-Net.**
 Built for clinical reproducibility, interpretability, and robust performance on the PhysioNet MPS Dataset.
 
+Feel free to see the predictions in 3D : [Website](https://idscspect-6xk53wyjerayda6j7eesq7.streamlit.app/)
+
 ## 📋 Table of Contents
 - **The Mission**
 - **Model**
