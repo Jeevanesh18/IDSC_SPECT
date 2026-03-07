@@ -7,9 +7,15 @@
 ![alt text](https://img.shields.io/badge/Docker-Enabled-blue?logo=docker)
 
 <p align="center">
-  <img src="assets/Soft_probability prediction.png" alt="SPECT Segmentation Demo" width="800">
+  <img src="assets/Soft_probability_prediction.png" alt="SPECT Segmentation Demo (Using probability)" width="500">
   <br>
   <em>Figure 1: Automated Left Ventricle segmentation with Uncertainty Heatmaps. (Left: Raw SPECT, Middle: Prediction, Right: Probability Map)</em>
+</p>
+
+<p align="center">
+  <img src="assets/Mask_prediction.png" alt="SPECT Segmentation Demo (at multiple slices)" width="500">
+  <br>
+  <em>Figure 2: Automated Left Ventricle segmentation. (Top: Raw SPECT, Bottom: Prediction)</em>
 </p>
 
 **Automated segmentation of the left ventricular wall from Myocardial Perfusion SPECT images using nnU-Net.**
@@ -17,6 +23,7 @@ Built for clinical reproducibility, interpretability, and robust performance on 
 
 ## 📋 Table of Contents
 - **The Mission**
+- **Model**
 - **Dataset & Preprocessing**
 - **Repository Structure**
 - **Installation (Docker)**
@@ -35,11 +42,34 @@ This repository provides an end-to-end pipeline to:
 2. **Segment**: Automatically identify the Left Ventricle (LV) using nnU-Net, the state-of-the-art self-configuring framework for medical segmentation.
 3. **Explain**: Provide interpretable outputs (Probability Heatmaps) to aid clinicians in trusting the model ("The Insights").
 
+## 🧠 Model
+
+**We use nnU-Net V2 with a 2D configuration.**
+
+Key features:
+- Automatic architecture configuration
+- Dice + Cross Entropy loss
+- 5-fold cross validation (usually nnUnet performs 5 folds but due to GPU limitations we decided to do only  0 fold with 200 epochs)
+- Patch-based training
+
+**Our pretrained model scores:**
+- Epoch: 228
+
+- Train loss: -0.9747
+
+- Validation loss: -0.8556
+
+- Pseudo Dice: 0.8973
+
 ## 📦 Dataset & Preprocessing
 Source: [PhysioNet Myocardial Perfusion SPECT (MPS) Database](https://www.google.com/url?sa=E&q=https%3A%2F%2Fphysionet.org%2Fcontent%2Fmyocardial-perfusion-spect%2F1.0.0%2F)
 
 
-The dataset consists of 83 unique patients acquired using a CZT-based gamma camera (Discovery NM 530c, GE Healthcare). Two most important files in the zip file are DICOM and NlfTI.
+The dataset consists of 83 unique patients acquired using a CZT-based gamma camera (Discovery NM 530c, GE Healthcare). The dataset contains two key components:
+• Raw SPECT scans in DICOM format
+• Expert-annotated segmentation masks in NIfTI format 
+
+(There are more images than patients cause some patients have more than one image)
 
 ### Data Split Strategy
 To ensure strict evaluation, the data is split based on the availability of ground-truth masks:
