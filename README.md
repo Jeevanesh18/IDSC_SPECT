@@ -196,6 +196,12 @@ Check nnUNet_results/Dataset999_SPECT/visualizations. Each PDF contains:
 Example Output:
 A heatmap showing high confidence (Red) in the ventricular wall and low confidence (Blue) in the background.
 
+<p align="center">
+  <img src="assets/pdf_example.png" alt="Example of the pdf generated" width="500">
+  <br>
+  <em>Figure 1: Automated Left Ventricle segmentation with Uncertainty Heatmaps. (Top: Raw SPECT, Middle: Prediction overlay, Bottom: LV Probability Heatmap)</em>
+</p>
+
 ## 🤝 Credits
 Dataset: [PhysioNet / GE Healthcare](https://physionet.org/content/myocardial-perfusion-spect/1.0.0/).
 
