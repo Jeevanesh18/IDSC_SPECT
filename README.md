@@ -199,7 +199,7 @@ A heatmap showing high confidence (Red) in the ventricular wall and low confiden
 <p align="center">
   <img src="assets/pdf_example.png" alt="Example of the pdf generated" width="500">
   <br>
-  <em>Figure 1: Automated Left Ventricle segmentation with Uncertainty Heatmaps. (Top: Raw SPECT, Middle: Prediction overlay, Bottom: LV Probability Heatmap)</em>
+  <em>Figure 3: Automated Left Ventricle segmentation with Uncertainty Heatmaps. (Top: Raw SPECT, Middle: Prediction overlay, Bottom: LV Probability Heatmap)</em>
 </p>
 
 ## 🤝 Credits
