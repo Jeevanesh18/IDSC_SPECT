@@ -175,7 +175,7 @@ Unzip the content and place the contents of nnUNet_raw,nnUNet_preprocessed,nnUNe
 
 **3. Run Inference:**
 
-Start the Docker container (as shown in Installation). Run the prediction script to generate segmentation masks for the test set.
+Start the Docker container (as shown in Installation). Run the prediction script to generate segmentation masks for the test set. (If there is an error of invalid command it might be because the bash command is generated in separate lines)
 ```bash
   bash predict.sh
    ```
