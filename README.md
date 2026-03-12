@@ -45,7 +45,11 @@ This repository provides an end-to-end pipeline to:
 3. **Explain**: Provide interpretable outputs (Probability Heatmaps) to aid clinicians in trusting the model ("The Insights").
 
 ## 🧠 Model
-
+<p align="center">
+  <img src="assets/unet.png" alt="U-Net model" width="500">
+  <br>
+  <em>Figure 1: Automated Left Ventricle segmentation with Uncertainty Heatmaps. (Left: Raw SPECT, Middle: Prediction, Right: Probability Map)</em>
+</p>
 **We use nnU-Net V2 with a 2D configuration.**
 
 Key features:
